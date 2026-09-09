@@ -3,25 +3,25 @@
 ## High-level architecture
 
 ```text
-                  ┌─────────────────────────────┐
-                  │      Primary Controller     │
-                  │                             │
-IR line sensors ─▶│ Line following              │
+                   ┌─────────────────────────────┐
+                   │      Primary Controller     │
+                   │                             │
+IR line sensors ─▶ │ Line following              │
 Front ultrasonic ─▶│ Obstacle avoidance          │
 Side ultrasonic ──▶│ Object detection            │
-Gripper servos ──▶│ Object collection/deposit   │
-Ground RGB ──────▶│ Deposit-zone detection      │
-                  │                             │
-                  │     Serial @ 57600 baud     │
-                  └─────────────┬───────────────┘
-                                │
-                                ▼
+Gripper servos ──▶ │ Object collection/deposit   │
+Ground RGB ──────▶ │ Deposit-zone detection      │
+                   │                             │
+                   │     Serial @ 57600 baud     │
+                   └─────────────┬───────────────┘
+                                 │
+                                 ▼
                   ┌─────────────────────────────┐
                   │   Secondary Controller      │
                   │                             │
                   │ TCS34725 colour sensor      │
                   │ 16x2 LCD status display     │
-                  │ Buzzer feedback              │
+                  │ Buzzer feedback             │
                   └─────────────────────────────┘
 ```
 
