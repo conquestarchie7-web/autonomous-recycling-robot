@@ -88,9 +88,8 @@ The sketches use the following Arduino libraries:
 
 ```text
 autonomous-recycling-robot/
-├── robot_controller/
+├── src/
 │   └── robot_controller.ino
-├── colour_sensor_board/
 │   └── colour_sensor_board.ino
 ├── docs/
 │   └── system_overview.md
@@ -102,8 +101,8 @@ autonomous-recycling-robot/
 The project uses two independent Arduino sketches because the original system used two communicating controller boards.
 
 1. Install the required Arduino libraries.
-2. Open `robot_controller/robot_controller.ino` in the Arduino IDE and upload it to the primary controller.
-3. Open `colour_sensor_board/colour_sensor_board.ino` and upload it to the secondary controller.
+2. Open `src/robot_controller.ino` in the Arduino IDE and upload it to the primary controller.
+3. Open `src/colour_sensor_board.ino` and upload it to the secondary controller.
 4. Recreate the sensor, motor, servo, LCD and serial wiring described by the pin definitions in the sketches.
 5. Tune the IR threshold and colour-classification thresholds for the physical environment before operation.
 
